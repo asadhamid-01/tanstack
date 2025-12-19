@@ -1,7 +1,10 @@
+import { Dashboard } from "@/components/dashboard/page"
 
 const page = () => {
   return (
-    <div>dashboard</div>
+    <div>
+      <Dashboard/>
+    </div>
   )
 }
 
