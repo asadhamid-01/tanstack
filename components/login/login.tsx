@@ -8,7 +8,7 @@ import { Eye, EyeOff } from "lucide-react";
 
 
 export const Login = () => {
-          const [showPassword, setShowPassword] = useState(false);
+        const [showPassword, setShowPassword] = useState(false);
         const [email, setEmail] = useState("");
         const [password, setPassword] = useState("");
         const router = useRouter();
@@ -41,14 +41,14 @@ export const Login = () => {
     }
 
   return (
-    <div className='w-96 flex flex-col justify-start items-center gap-8'>
-                    <div className="self-stretch flex flex-col justify-start items-start gap-5">
+    <div className='flex flex-col gap-4 h-screen items-center justify-center'>
+                    <div className="flex gap-4 flex-col">
 
                     {/* Form Container */}
-            <div className="self-stretch flex flex-col justify-start items-start gap-5">
+            <div className="flex flex-col gap-5">
 
                 {/* Email Field */}
-                <div className="self-stretch flex flex-col gap-2.5">
+                <div className="flex flex-col gap-2.5">
                     <label className="text-canvas-text-contrast text-sm font-semibold">
                         Email
                     </label>
@@ -57,7 +57,7 @@ export const Login = () => {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         placeholder="john.doe@mail.com"
-                        className="h-12 bg-transparent border-canvas-border text-canvas-solid placeholder:text-canvas-solid"
+                       className="h-12 bg-transparent border text-canvas-solid placeholder:text-canvas-solid px-2 rounded-2xl"
                     />
                 </div>
 
@@ -72,7 +72,7 @@ export const Login = () => {
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                             placeholder="Enter password"
-                            className="h-12 bg-transparent border-canvas-border text-canvas-solid placeholder:text-canvas-solid pr-10"
+                              className="h-12 bg-transparent border text-canvas-solid placeholder:text-canvas-solid px-2 rounded-2xl"
                         />
 
                         <button
@@ -88,6 +88,7 @@ export const Login = () => {
 
                 <button
                 onClick={handleLogin}
+                  className="border p-2 rounded-full cursor-pointer"
                 >
                     {loginMutatin.isPending ? "loggin in..." : "login"}
                 </button>
